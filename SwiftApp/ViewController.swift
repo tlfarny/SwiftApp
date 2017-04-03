@@ -4,7 +4,6 @@
 //
 //  Created by Travis Farnsworth on 4/2/17.
 //  Copyright © 2017 Travis Farnsworth. All rights reserved.
-//  🙃
 //
 
 import UIKit
@@ -17,19 +16,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    var tapCount = 0
+    @IBOutlet weak var text1: UITextField!
+    @IBOutlet weak var text2: UITextField!
     
     @IBAction func buttonTapped(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 10 {
-            topTextLabel.text = "You have tapped the button 10 times"
-        }
+        print(text1)
+        print(text1.text!)
+        print(text2.text!)
     }
 
-    @IBAction func otherButtonPressed(_ sender: Any) {
-        topTextLabel.text = "Buttons are cool"
-        print("Button 2 Pressed")
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
